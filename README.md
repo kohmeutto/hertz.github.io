@@ -1,104 +1,203 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
-</p>
-<br><br>
-<p align="center">
-    <h1 align="center">Just the Docs</h1>
-    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://just-the-docs.com/">See it in action!</a></strong></p>
-    <br><br><br>
-</p>
+## (b) CEM - Homogenous
 
-<p align="center">A video walkthrough of various Just the Docs features</p>
+### 1. Homogenous, 코시-오일러 제차미분방정식
 
-https://user-images.githubusercontent.com/85418632/211225192-7e5d1116-2f4f-4305-bb9b-437fe47df071.mp4
+아래와 같은 **코시-오일러 미분방정식**의 해를 구한다고 할 때,
 
-## Installation
+1) 형태1
 
-### Use the template
+$$x^2y''+axy'+by=0$$
 
-The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
+$$D^2+\left(a-1\right)D+b=0$$
 
-Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
+2) 형태2
 
-You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
+$$xy^{\prime}+ay=0$$
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
+$$D+a=0$$
 
-More specifically, the created site:
+---
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+### 2. 서로 다른, 실수 해
 
-Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+\begin{align}
+    D=\alpha,\beta$$
+    y=c_1x^{\alpha}+c_2x^{\beta}$$
+\end{align}
 
-### Use as a Ruby Gem
+---
 
-Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
+**example1)**
 
-Add this line to your Jekyll site's `Gemfile`:
+$$x^2y''-4xy'+6y=0$$
 
-```ruby
-gem "just-the-docs"
-```
+<details>
+  <summary>sol</summary>
 
-And add this line to your Jekyll site's `_config.yml`:
+    $ \left(D-3\right)\left(D-2\right)=0\rightarrow D=3,2 $
+    
+    $ y=c_1x^3+c_2x^2 $
 
-```yaml
-theme: just-the-docs
-```
+</details>
 
-And then install all relevant dependencies:
 
-```shell
-$ bundle
-```
+- sol
+    
+    $$
+    \left(D-3\right)\left(D-2\right)=0\rightarrow D=3,2
+    $$
+    
+    $$
+    y=c_1x^3+c_2x^2
+    $$
+    
 
-## Usage
+**example2)** @Seungmin Son 
 
-[View the documentation][Just the Docs] for usage information.
+$$
+x^2y''-xy'-y=0
+$$
 
-## Contributing
+- sol
+    
+    $$
+    D^2-2D-1=0\rightarrow D=1\pm\sqrt{2}
+    $$
+    
+    $$
+    y=c_1x^{1+\sqrt{2}}+c_2x^{1-\sqrt{2}}
+    $$
+    
 
-Bug reports, proposals of new features, and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+**example3)** @Seungmin Son 
 
-### Submitting code changes:
+$$
+xy''-y'=0
+$$
 
-- Submit an [Issue](https://github.com/just-the-docs/just-the-docs/issues) that motivates the changes, using the appropriate template
-- Discuss the proposed changes with other users and the maintainers
-- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
-- Ensure all CI tests pass
-- Provide instructions to check the effect of the changes
-- Await code review
+- sol
+    
+    $$
+    D^{}\left(D-2\right)=0\rightarrow D=2,0
+    $$
+    
+    $$
+    y=c_1x^2+c_2
+    $$
+    
 
-### Design and development principles of this theme:
+**example4)** 
 
-1. As few dependencies as possible
-2. No build script needed
-3. First class mobile experience
-4. Make the content shine
+$$
+x^3y''+2x^2y'-6xy=0
+$$
 
-## Development
+- sol
+    
+    $$
+    \left(D+3\right)\left(D-2\right)=0\rightarrow D=-3,2
+    $$
+    
+    $$
+    y=c_1e^{-3x}+c_2e^{2x}
+    $$
+    
 
-To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
+---
 
-A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
+### 2. 중근
 
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+$$
+D=\alpha
+$$
 
-When this theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be included in the gem.
+$$
+y=\left(c_1+c_2\ln x\right)x^{\alpha}
+$$
 
-## License
+---
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+**example1)**
 
-[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+$$
+xy''+y'=0
+$$
 
-[Jekyll]: https://jekyllrb.com
-[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
-[Just the Docs]: https://just-the-docs.com
-[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
-[GitHub Pages]: https://pages.github.com/
-[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
+- sol
+    
+    $$
+    D^2=0\rightarrow D=0
+    $$
+    
+    $$
+    y=c_1+c_2\ln x
+    $$
+    
+
+**example2)**
+
+$$
+x^2y''-xy'+y=0
+$$
+
+- sol
+    
+    $$
+    \left(D-1\right)^2=0
+    $$
+    
+    $$
+    y=\left(c_1+c_2\ln x\right)x
+    $$
+    
+
+---
+
+### 3. 서로 다른, 복소수 해
+
+$$
+D=\alpha\pm i\beta
+$$
+
+$$
+y=x^{\alpha}\left(c_1\cos\left(\beta\ln x\right)+c_2\sin\left(\beta\ln x\right)\right)
+$$
+
+$$
+y=c_1x^{\alpha+i\beta}+c_2x^{\alpha-i\beta}
+$$
+
+---
+
+**example1)**
+
+$$
+x^2y''+xy'+y=0
+$$
+
+- sol
+    
+    $$
+    D^2+1=0\rightarrow D=\pm i
+    $$
+    
+    $$
+    y=c_1\cos\left(\ln x\right)+c_2\sin\left(\ln x\right)
+    $$
+    
+
+**example2)** @Seungmin Son 
+
+$$
+x^2y''+3xy'+3y=0
+$$
+
+- sol
+    
+    $$
+    D^2+2D+3=0\rightarrow D=-1\pm i\sqrt{2}
+    $$
+    
+    $$
+    y=x^{-1}\left(c_1\cos\left(\sqrt{2}\ln x\right)+c_2\sin\left(\sqrt{2}\ln x\right)\right)
+    $$
