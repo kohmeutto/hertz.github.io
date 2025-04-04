@@ -22,7 +22,7 @@ $$D+a=0$$
 
 \begin{align}
     D=\alpha,\beta$$
-    y=c_1x^{\alpha}+c_2x^{\beta}$$
+    y=c_1x^{\alpha}+c_2x^{\beta}
 \end{align}
 
 ---
