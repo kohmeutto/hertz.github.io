@@ -20,10 +20,10 @@ $$D+a=0$$
 
 ### 2. 서로 다른, 실수 해
 
-\begin{align}
+\begin{aligned}
     D=\alpha,\beta$$
     y=c_1x^{\alpha}+c_2x^{\beta}
-\end{align}
+\end{aligned}
 
 ---
 
